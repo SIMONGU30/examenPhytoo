@@ -14,23 +14,28 @@ print("4.Eliminar producto")
 print("0.Salir")
 print("////////////////////////////////////////////////////////////")
 opcion=int(input("ingrese una opcion del menu: "))
-while(opcion!=4): 
+while(opcion!=0): 
     if opcion ==1:
       producto=input("ingrese nombre del producto: ")
       productos.append(producto)
     elif opcion==2:
-        for producto in productos:
             print(productos)
+
     elif opcion==3:
+        
         productoCambio=input("ingrese producto a cambiar: ")
-        cambio=input("ingrese por el que lo va a cambiar: ")
-        for i in range (len(productos)):
-            if (productos[i]==productoCambio):
-                productos[i]=cambio
+        if(productoCambio==cambio):
+            cambio=input("ingrese por el que lo va a cambiar: ")
+            for i in range (len(productos)):
+             if (productos[i]==productoCambio):
+                    productos[i]=cambio
+        
     elif opcion==4:
         for producto in productos:
             productoEliminado=input("ingrese producto a Eliminar: ")
-        del productos[i]
+            if(productoEliminado==producto):
+                productos.remove(productoEliminado)
+                print("producto eliminado con exito ")
     elif opcion==0:
         print("Suerte gonorreaaaaa")
     else:
